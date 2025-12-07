@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Bun lockfile (use npm for Netlify deployment)
+bun.lockb
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
