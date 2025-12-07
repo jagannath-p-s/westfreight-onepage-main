@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
-import { ArrowRight, Phone, Sparkles } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import heroImage from "@/assets/hero-shipping.jpg";
 
 const Hero = () => {
@@ -27,23 +27,16 @@ const Hero = () => {
         </div>
       </motion.div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10 py-12 md:py-16">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
+            className="space-y-6"
           >
-            <motion.span 
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-accent/20 text-accent-foreground px-4 py-2 rounded-full text-sm font-medium mb-6 backdrop-blur-sm border border-accent/30"
-            >
-             
-            </motion.span>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 text-balance">
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-8 md:mb-10 text-balance">
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -73,7 +66,7 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-xl font-medium"
+              className="text-lg md:text-xl text-primary-foreground/90 mb-10 md:mb-12 max-w-xl font-medium leading-relaxed"
             >
               Premier logistics solutions for your business success. We deliver your
               cargo safely and on time across UAE, Middle East, and worldwide destinations.
@@ -82,7 +75,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.6 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap gap-4 md:gap-6"
             >
               <Button variant="hero" size="xl" className="group">
                 Get Free Quote
@@ -119,45 +112,45 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="hidden lg:block"
           >
-            <div className="bg-navy/90 backdrop-blur-md rounded-xl p-5 shadow-2xl border border-primary-foreground/10">
-              <div className="text-center mb-4">
-                <h3 className="text-xl font-bold text-primary-foreground mb-1">
+            <div className="bg-navy/90 backdrop-blur-md rounded-xl p-6 md:p-8 shadow-2xl border border-primary-foreground/10">
+              <div className="text-center mb-6">
+                <h3 className="text-xl md:text-2xl font-bold text-primary-foreground mb-2">
                   Get a Free Quote
                 </h3>
                
               </div>
-              <form className="space-y-3">
+              <form className="space-y-4">
                 <motion.input
                   whileFocus={{ scale: 1.01 }}
                   type="text"
                   placeholder="Your Name"
                   required
-                  className="w-full px-3 py-2 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300 text-sm"
+                  className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300"
                 />
                 <motion.input
                   whileFocus={{ scale: 1.01 }}
                   type="email"
                   placeholder="Your Email"
                   required
-                  className="w-full px-3 py-2 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300 text-sm"
+                  className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300"
                 />
                 <motion.input
                   whileFocus={{ scale: 1.01 }}
                   type="tel"
                   placeholder="Phone Number"
                   required
-                  className="w-full px-3 py-2 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300 text-sm"
+                  className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300"
                 />
                 <motion.textarea
                   whileFocus={{ scale: 1.01 }}
                   placeholder="Describe your shipping requirements (cargo type, origin, destination, timeline...)"
-                  rows={2}
+                  rows={3}
                   required
-                  className="w-full px-3 py-2 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300 resize-none text-sm"
+                  className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300 resize-none"
                 />
-                <Button variant="hero" size="default" className="w-full group text-sm">
+                <Button variant="hero" size="lg" className="w-full group mt-2">
                   Request Quote
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 
               </form>

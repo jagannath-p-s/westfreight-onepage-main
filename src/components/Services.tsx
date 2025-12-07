@@ -123,9 +123,7 @@ const Services = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-12"
         >
-          <Button variant="hero" size="xl">
-            View All Services
-          </Button>
+         
         </motion.div>
       </div>
     </section>
