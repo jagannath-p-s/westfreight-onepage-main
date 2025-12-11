@@ -15,14 +15,14 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone Number",
-    details: ["+971 543703221"],
-    link: "tel:+971543703221",
+    details: ["+971 4 123 4567"],
+    link: "tel:+97141234567",
   },
   {
     icon: Mail,
     title: "Email Address",
-    details: ["info@westfreight.com"],
-    link: "mailto:info@westfreight.com",
+    details: ["info@westfreightshipping.com"],
+    link: "mailto:info@westfreightshipping.com",
   },
   {
     icon: Clock,

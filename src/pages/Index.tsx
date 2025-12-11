@@ -23,8 +23,8 @@ const Index = () => {
         "image": "https://westfreight.com/logo.png",
         "description": "Premier freight shipping and logistics company in Dubai, UAE offering air freight, ocean freight, road transportation, warehousing, and customs clearance services.",
         "url": "https://westfreight.com",
-        "telephone": "+971543703221",
-        "email": "info@westfreight.com",
+        "telephone": "+97141234567",
+        "email": "info@westfreightshipping.com",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Al Quasis 1",
@@ -59,7 +59,7 @@ const Index = () => {
         ],
         "contactPoint": {
           "@type": "ContactPoint",
-          "telephone": "+971543703221",
+          "telephone": "+97141234567",
           "contactType": "customer service",
           "availableLanguage": ["English", "Arabic"]
         }
@@ -100,7 +100,7 @@ const Index = () => {
     <>
       <Helmet>
         <title>West Freight Shipping | Freight & Logistics Company in Dubai, UAE</title>
-        <meta name="description" content="Premier freight shipping company in Dubai. Air freight, ocean freight, road transport, warehousing & customs clearance. Get a free quote: +971 543703221" />
+        <meta name="description" content="Premier freight shipping company in Dubai. Air freight, ocean freight, road transport, warehousing & customs clearance. Get a free quote: +971 4 123 4567" />
         <meta name="keywords" content="freight shipping Dubai, logistics company UAE, air freight Dubai, ocean freight UAE, road freight Middle East, customs clearance Dubai, warehousing services UAE, supply chain Dubai, cargo shipping Al Quasis, international shipping Dubai, freight forwarding UAE, logistics solutions Middle East, cargo transport Dubai, shipping company UAE, freight services Dubai" />
         <link rel="canonical" href="https://westfreight.com" />
         

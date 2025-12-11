@@ -49,7 +49,7 @@ const Header = () => {
               transition={{ duration: 0.6 }}
               whileHover={{ scale: 1.02 }}
             >
-              <img src={logo} alt="West Freight Shipping" className="h-10 md:h-12" />
+              <img src={logo} alt="West Freight Shipping" className="h-12 md:h-14" />
             </motion.a>
 
             {/* Centered Navigation - Desktop */}
@@ -75,12 +75,12 @@ const Header = () => {
             <div className="flex items-center gap-3">
               {/* Phone number - Desktop */}
               <motion.a
-                href="tel:+971543703221"
+                href="tel:+97141234567"
                 className="hidden xl:flex items-center text-gray-700 hover:text-accent transition-colors"
                 whileHover={{ scale: 1.05 }}
               >
                 <Phone className="w-4 h-4 mr-2" />
-                <span className="text-sm font-medium">+971 543703221</span>
+                <span className="text-sm font-medium">+971 4 123 4567</span>
               </motion.a>
 
               {/* Get Quote Button - Desktop */}
@@ -202,16 +202,16 @@ const Header = () => {
                   <div>
                     <h3 className="font-bold text-gray-900 mb-3 text-sm">Phone</h3>
                     <div className="space-y-2">
-                      <a href="tel:+971543703221" className="block text-sm text-gray-600 hover:text-accent transition-colors">
-                        +971 543703221
+                      <a href="tel:+97141234567" className="block text-sm text-gray-600 hover:text-accent transition-colors">
+                        +971 4 123 4567
                       </a>
                     </div>
                   </div>
                   
                   <div>
                     <h3 className="font-bold text-gray-900 mb-3 text-sm">Email</h3>
-                    <a href="mailto:info@westfreight.com" className="block text-sm text-gray-600 hover:text-accent transition-colors">
-                      info@westfreight.com
+                    <a href="mailto:info@westfreightshipping.com" className="block text-sm text-gray-600 hover:text-accent transition-colors">
+                      info@westfreightshipping.com
                     </a>
                   </div>
                 </div>

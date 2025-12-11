@@ -152,23 +152,23 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="tel:+971543703221"
+                  href="tel:+97141234567"
                   className="flex items-center gap-3 group"
                 >
                   <Phone className="w-5 h-5 text-accent flex-shrink-0" />
                   <span className="text-primary-foreground/70 group-hover:text-primary-foreground transition-colors">
-                    +971 543703221
+                    +971 4 123 4567
                   </span>
                 </a>
               </li>
               <li>
                 <a 
-                  href="mailto:info@westfreight.com"
+                  href="mailto:info@westfreightshipping.com"
                   className="flex items-center gap-3 group"
                 >
                   <Mail className="w-5 h-5 text-accent flex-shrink-0" />
                   <span className="text-primary-foreground/70 group-hover:text-primary-foreground transition-colors">
-                    info@westfreight.com
+                    info@westfreightshipping.com
                   </span>
                 </a>
               </li>
