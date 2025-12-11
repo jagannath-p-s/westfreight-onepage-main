@@ -11,6 +11,7 @@ import FAQ from "@/components/FAQ";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   const schemaData = {
@@ -148,6 +149,7 @@ const Index = () => {
         <FAQ />
         <Contact />
         <Footer />
+        <WhatsAppButton />
       </main>
     </>
   );

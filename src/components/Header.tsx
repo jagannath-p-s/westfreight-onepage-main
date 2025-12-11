@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Phone, Mail, Menu, X, ChevronDown, ChevronRight, Search, FileText, PackageSearch, ShoppingCart, ArrowUpRight, Facebook, Twitter, Linkedin, Play, Grid } from "lucide-react";
+import { Phone, Mail, Menu, X, ChevronDown, ChevronRight, FileText, ArrowUpRight, Facebook, Twitter, Linkedin, Play } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { Button } from "./ui/button";
 import QuoteForm from "./QuoteForm";
@@ -39,7 +39,7 @@ const Header = () => {
             ? "shadow-lg" 
             : "shadow-md"
         }`}>
-          <div className="flex items-center justify-between h-16 px-6">
+          <div className="flex items-center justify-between h-16 lg:h-20 px-6">
             {/* Logo */}
             <motion.a 
               href="#home" 
@@ -49,7 +49,7 @@ const Header = () => {
               transition={{ duration: 0.6 }}
               whileHover={{ scale: 1.02 }}
             >
-              <img src={logo} alt="West Freight Shipping" className="h-12 md:h-14" />
+              <img src={logo} alt="West Freight Shipping" className="h-12 md:h-14 lg:h-16" />
             </motion.a>
 
             {/* Centered Navigation - Desktop */}
@@ -133,22 +133,6 @@ const Header = () => {
               <div className="flex flex-col min-h-full">
                 {/* Top icons */}
                 <div className="flex items-center justify-end gap-2 p-4 border-b border-gray-200 bg-white sticky top-0 z-10">
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="p-2 text-gray-600 hover:text-gray-900"
-                    aria-label="Shopping Cart"
-                  >
-                    <ShoppingCart className="w-5 h-5" />
-                  </motion.button>
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="p-2 text-gray-600 hover:text-gray-900"
-                    aria-label="Search"
-                  >
-                    <Search className="w-5 h-5" />
-                  </motion.button>
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}

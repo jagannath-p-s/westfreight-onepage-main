@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Plane, Ship, Truck, Warehouse, Package, Globe, FileText, Container, Award } from "lucide-react";
 import { Button } from "./ui/button";
 import { useRef } from "react";
+import AnimatedBackground from "./AnimatedBackground";
 
 const services = [
   {
