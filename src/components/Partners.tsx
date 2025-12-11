@@ -48,7 +48,7 @@ const Partners = () => {
         {/* Mobile: Grid view, Desktop: Animated horizontal scroll */}
         <div className="relative w-full">
           {/* Mobile Grid */}
-          <div className="grid grid-cols-2 gap-4 md:hidden">
+          <div className="grid grid-cols-2 gap-4 md:hidden px-2">
             {partners.map((partner, index) => (
               <motion.div
                 key={partner.name}
@@ -56,21 +56,22 @@ const Partners = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-xl p-4 shadow-sm border border-border flex flex-col items-center justify-center gap-3"
+                className="bg-white rounded-xl p-6 shadow-sm border border-border flex flex-col items-center justify-center gap-3 min-h-[140px]"
               >
-                <div className="w-16 h-16 relative flex items-center justify-center grayscale">
+                <div className="w-20 h-20 relative flex items-center justify-center">
                   <img
-                    src={`https://logo.clearbit.com/${partner.domain}?size=128`}
+                    src={`https://logo.clearbit.com/${partner.domain}?size=256`}
                     alt={`${partner.name} logo`}
-                    className="max-w-full max-h-full object-contain"
+                    className="max-w-full max-h-full object-contain filter grayscale-0"
                     onError={(e) => {
-                      // Fallback if logo fails to load
+                      // Fallback if logo fails to load - show company name instead
+                      const parent = e.currentTarget.parentElement!;
                       e.currentTarget.style.display = 'none';
-                      e.currentTarget.parentElement!.innerText = partner.name[0];
+                      parent.innerHTML = `<div class="w-full h-full flex items-center justify-center bg-accent/10 rounded-lg"><span class="text-2xl font-bold text-accent">${partner.name.charAt(0)}</span></div>`;
                     }}
                   />
                 </div>
-                <p className="text-xs font-medium text-foreground/80 text-center leading-tight">
+                <p className="text-xs font-semibold text-foreground text-center leading-tight">
                   {partner.name}
                 </p>
               </motion.div>
@@ -115,32 +116,7 @@ const Partners = () => {
           </div>
         </div>
 
-        {/* Trust badges */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-8 mt-12 md:mt-16 px-4"
-        >
-          {[
-            { icon: Award, text: "ISO 9001 Certified" },
-            { icon: CheckCircle, text: "Licensed Freight Forwarder" },
-            { icon: Globe, text: "Global Network" },
-          ].map((badge, index) => (
-            <motion.div
-              key={badge.text}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-              className="flex items-center gap-2 bg-white px-4 md:px-5 py-2.5 md:py-3 rounded-full border border-border shadow-sm"
-            >
-              <badge.icon className="w-4 h-4 md:w-5 md:h-5 text-accent flex-shrink-0" />
-              <span className="text-xs md:text-sm font-medium text-foreground whitespace-nowrap">{badge.text}</span>
-            </motion.div>
-          ))}
-        </motion.div>
+       
       </div>
     </section>
   );
