@@ -1,8 +1,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Award, Shield, CheckCircle, Globe } from "lucide-react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
-// Real company domains for fetching logos
+// Partner companies with multiple logo source fallbacks
 const partners = [
   { name: "Emirates Logistics", domain: "emirateslogistics.com" },
   { name: "DP World", domain: "dpworld.com" },
@@ -13,6 +13,51 @@ const partners = [
   { name: "Emaar", domain: "emaar.com" },
   { name: "Etisalat", domain: "etisalat.ae" },
 ];
+
+// Component to handle individual partner logo with fallback
+const PartnerLogo = ({ partner, size = "medium" }: { partner: typeof partners[0]; size?: "medium" | "large" }) => {
+  const [imageError, setImageError] = useState(false);
+  const [currentSource, setCurrentSource] = useState(0);
+  
+  const logoSources = [
+    `https://logo.clearbit.com/${partner.domain}`,
+    `https://www.google.com/s2/favicons?domain=${partner.domain}&sz=256`,
+    `https://icon.horse/icon/${partner.domain}`,
+  ];
+
+  const handleImageError = () => {
+    if (currentSource < logoSources.length - 1) {
+      setCurrentSource(currentSource + 1);
+    } else {
+      setImageError(true);
+    }
+  };
+
+  const sizeClasses = size === "large" ? "w-20 h-20" : "w-16 h-16";
+  const initialSize = size === "large" ? "text-3xl" : "text-2xl";
+
+  if (imageError) {
+    return (
+      <div className={`${sizeClasses} bg-accent/10 rounded-full flex items-center justify-center`}>
+        <span className={`${initialSize} font-bold text-accent`}>
+          {partner.name.charAt(0)}
+        </span>
+      </div>
+    );
+  }
+
+  return (
+    <div className={`${sizeClasses} flex items-center justify-center`}>
+      <img
+        src={logoSources[currentSource]}
+        alt={`${partner.name} logo`}
+        className="max-w-full max-h-full object-contain"
+        onError={handleImageError}
+        loading="lazy"
+      />
+    </div>
+  );
+};
 
 const Partners = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -56,22 +101,10 @@ const Partners = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6 shadow-sm border border-border flex flex-col items-center justify-center gap-3 min-h-[140px]"
+                className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:border-accent/30 hover:shadow-md flex flex-col items-center justify-center gap-4 min-h-[140px] transition-all duration-300"
               >
-                <div className="w-20 h-20 relative flex items-center justify-center">
-                  <img
-                    src={`https://logo.clearbit.com/${partner.domain}?size=256`}
-                    alt={`${partner.name} logo`}
-                    className="max-w-full max-h-full object-contain filter grayscale-0"
-                    onError={(e) => {
-                      // Fallback if logo fails to load - show company name instead
-                      const parent = e.currentTarget.parentElement!;
-                      e.currentTarget.style.display = 'none';
-                      parent.innerHTML = `<div class="w-full h-full flex items-center justify-center bg-accent/10 rounded-lg"><span class="text-2xl font-bold text-accent">${partner.name.charAt(0)}</span></div>`;
-                    }}
-                  />
-                </div>
-                <p className="text-xs font-semibold text-foreground text-center leading-tight">
+                <PartnerLogo partner={partner} size="medium" />
+                <p className="text-sm font-semibold text-foreground text-center leading-tight">
                   {partner.name}
                 </p>
               </motion.div>
@@ -93,21 +126,10 @@ const Partners = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ scale: 1.05, y: -5 }}
-                  className="bg-white rounded-xl p-6 shadow-sm border border-border hover:border-accent/30 hover:shadow-md transition-all duration-300 w-[180px] flex flex-col items-center justify-center gap-4"
+                  className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:border-accent/30 hover:shadow-lg transition-all duration-300 w-[200px] flex flex-col items-center justify-center gap-4 grayscale hover:grayscale-0"
                 >
-                  <div className="w-20 h-20 relative flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
-                    <img
-                      src={`https://logo.clearbit.com/${partner.domain}?size=128`}
-                      alt={`${partner.name} logo`}
-                      className="max-w-full max-h-full object-contain"
-                      onError={(e) => {
-                        // Fallback if logo fails to load
-                        e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement!.innerText = partner.name[0];
-                      }}
-                    />
-                  </div>
-                  <p className="text-sm font-medium text-foreground/80 text-center leading-tight">
+                  <PartnerLogo partner={partner} size="large" />
+                  <p className="text-sm font-semibold text-foreground text-center leading-tight">
                     {partner.name}
                   </p>
                 </motion.div>
