@@ -184,7 +184,7 @@ const Hero = () => {
             </motion.div>
           </motion.div>
         </div>
-      </div>
+      </motion.div>
 
 
       {/* Video Modal */}
