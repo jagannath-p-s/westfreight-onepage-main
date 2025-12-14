@@ -49,16 +49,16 @@ const About = () => {
               transition={{ duration: 0.5 }}
               className="text-accent font-semibold uppercase tracking-wider text-sm inline-block"
             >
-              About Us
+              ABOUT US
             </motion.span>
          
             
             <div className="space-y-4 text-muted-foreground leading-relaxed text-base md:text-lg">
               <p>
-                West Freight Shipping delivers comprehensive logistics solutions across UAE, Middle East, and worldwide destinations. With over a decade of expertise, we combine cutting-edge technology with personalized service to move your cargo efficiently and securely.
+                West Freight Shipping supports global cargo movement by providing reliable logistics solutions across the UAE and worldwide destinations. With over a decade of expertise, we combine cutting-edge technology with personalized service to move your cargo efficiently and securely.
               </p>
               <p>
-                From air and ocean freight to customs clearance and supply chain management, we're your trusted partner in global trade.
+                From air, ocean, and land freight to customs clearance and supply chain management, we are your trusted partner in global trade.
               </p>
             </div>
 
@@ -96,9 +96,9 @@ const About = () => {
                 style={{ willChange: 'transform, opacity', transformStyle: 'preserve-3d' }}
               >
                 <motion.div
-                  className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center mb-4 transition-colors"
+                  className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-orange-600 flex items-center justify-center mb-4 transition-colors shadow-md"
                 >
-                  <CheckCircle className="w-6 h-6 text-accent" />
+                  <CheckCircle className="w-6 h-6 text-white" />
                 </motion.div>
                 <p className="text-foreground font-semibold text-sm leading-tight">
                   {feature}

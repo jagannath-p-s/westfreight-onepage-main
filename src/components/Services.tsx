@@ -1,12 +1,12 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Plane, Ship, Truck, Warehouse, Package, Globe, FileText, Container, Award } from "lucide-react";
+import { Plane, Ship, Truck, Warehouse, Package, Globe, FileText, Container, Award, PackageCheck } from "lucide-react";
 import { Button } from "./ui/button";
 import { useRef } from "react";
 import AnimatedBackground from "./AnimatedBackground";
 
 const services = [
   {
-    icon: Plane,
+    icon: PackageCheck,
     title: "Freight Coordination",
     description: "Air, ocean, and road freight arrangements worldwide coordinated through accredited global carriers and partners.",
     subServices: ["Air Freight Coordination", "Ocean Freight Coordination", "Road Freight Coordination"]
@@ -31,9 +31,9 @@ const services = [
   },
   {
     icon: Container,
-    title: "Container Handling Support",
-    description: "Smooth handling for containerized shipments, including stuffing, de-stuffing, loading, and operational supervision at key UAE facilities.",
-    subServices: ["Container Loading/Unloading Support", "Cargo Handling Oversight"]
+    title: "Specialized Cargo",
+    description: "Tailored support for project cargo, events, oversized goods, and heavy-lift shipments — ensuring safe and efficient handling from start to finish.",
+    subServices: ["Project Cargo Handling Support", "Exhibition & Event Logistics", "Heavy & Oversized Cargo Solutions"]
   },
   {
     icon: Package,
@@ -98,7 +98,7 @@ const Services = () => {
               style={{ willChange: 'transform, opacity', transformStyle: 'preserve-3d' }}
             >
               <motion.div 
-                className="w-14 h-14 bg-gradient-to-br from-navy to-navy-light rounded-xl flex items-center justify-center mb-4 shadow-md relative transition-all duration-300"
+                className="w-14 h-14 bg-gradient-to-br from-accent to-orange-600 rounded-xl flex items-center justify-center mb-4 shadow-md relative transition-all duration-300"
                 style={{ perspective: "1000px", transformStyle: "preserve-3d" }}
               >
                 <service.icon className="w-7 h-7 text-white transition-colors duration-300" style={{ transform: "translateZ(10px)" }} />

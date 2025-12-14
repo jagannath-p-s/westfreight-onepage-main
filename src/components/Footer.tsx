@@ -25,7 +25,7 @@ const Footer = () => {
               <img 
                 src={logo} 
                 alt="West Freight Shipping Dubai" 
-                className="h-12 md:h-20 w-auto object-contain"
+                className="h-16 md:h-24 w-auto object-contain"
                 style={{ 
                   filter: "brightness(0) invert(1)",
                   WebkitFilter: "brightness(0) invert(1)"
