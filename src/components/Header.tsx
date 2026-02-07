@@ -73,11 +73,11 @@ const Header = () => {
             <div className="flex items-center gap-3">
               {/* Phone number - Desktop */}
               <motion.a
-                href="tel:+97141234567"
+                href="tel:+971547810370"
                 className="hidden xl:flex items-center text-gray-700 transition-colors"
               >
                 <Phone className="w-4 h-4 mr-2" />
-                <span className="text-sm font-medium">+971 4 123 4567</span>
+                <span className="text-sm font-medium">+971 54 781 0370</span>
               </motion.a>
 
               {/* Get Quote Button - Desktop */}
@@ -180,8 +180,8 @@ const Header = () => {
                   <div>
                     <h3 className="font-bold text-gray-900 mb-3 text-sm">Phone</h3>
                     <div className="space-y-2">
-                      <a href="tel:+97141234567" className="block text-sm text-gray-600 transition-colors">
-                        +971 4 123 4567
+                      <a href="tel:+971547810370" className="block text-sm text-gray-600 transition-colors">
+                        +971 54 781 0370
                       </a>
                     </div>
                   </div>

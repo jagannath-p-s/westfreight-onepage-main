@@ -95,7 +95,7 @@ const WhyUs = () => {
               className="text-center group"
             >
               <motion.div 
-                className="w-24 h-24 bg-gradient-to-br from-accent to-orange rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg relative"
+                className="w-24 h-24 bg-gradient-to-br from-accent to-brand-green-hover rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg relative"
                 style={{ perspective: "1000px" }}
               >
                 <reason.icon className="w-12 h-12 text-accent-foreground" />

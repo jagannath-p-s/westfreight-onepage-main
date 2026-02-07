@@ -147,7 +147,7 @@ const Hero = () => {
               transition={{ delay: 0.6, duration: 0.6 }}
               className="text-lg md:text-xl text-white/90 mb-10 md:mb-12 max-w-2xl mx-auto font-normal leading-relaxed"
             >
-              Delivering excellence in freight forwarding, international trading, and end-to-end supply chain solutions across UAE and worldwide destinations.
+              West Freight Shipping — powering global connections. Logistics services in Dubai, UAE: freight forwarding, international trading, and end-to-end supply chain solutions across the UAE and worldwide.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}

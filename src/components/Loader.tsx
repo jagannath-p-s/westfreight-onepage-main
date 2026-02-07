@@ -23,25 +23,18 @@ const Loader = ({ onComplete }: { onComplete: () => void }) => {
       initial={{ opacity: 1 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed inset-0 z-[9999] flex items-center justify-center"
-      style={{
-        background: "linear-gradient(135deg, hsl(25 95% 55%), hsl(4 85% 50%))",
-      }}
+      className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[hsl(220,15%,12%)]"
     >
-      <div className="relative inline-block">
-        {/* Logo */}
+      {/* Logo on top */}
+      <div className="relative inline-block mb-8">
         <img
           src={logo}
           alt="West Freight Shipping"
           className="h-24 md:h-32 w-auto block relative z-10"
-          style={{
-            filter: "grayscale(100%) brightness(0) invert(1)",
-          }}
         />
-        
-        {/* Shine effect - slanted opacity gradient */}
+        {/* Shine effect - brand green tint */}
         <motion.div
-          className="absolute inset-0 pointer-events-none overflow-hidden"
+          className="absolute inset-0 pointer-events-none overflow-hidden opacity-30"
           style={{
             maskImage: `url(${logo})`,
             WebkitMaskImage: `url(${logo})`,
@@ -54,9 +47,8 @@ const Loader = ({ onComplete }: { onComplete: () => void }) => {
           }}
         >
           <motion.div
-            className="h-full w-[150%]"
+            className="h-full w-[150%] bg-[hsl(100,58%,55%)]"
             style={{
-              background: "linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.8) 70%, transparent 100%)",
               transform: "skewX(-25deg)",
             }}
             animate={{
@@ -71,6 +63,24 @@ const Loader = ({ onComplete }: { onComplete: () => void }) => {
           />
         </motion.div>
       </div>
+      {/* Loading bar in brand green */}
+      <motion.div
+        className="h-1 w-32 rounded-full bg-white/20 overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+      >
+        <motion.div
+          className="h-full rounded-full bg-[hsl(100,58%,55%)]"
+          animate={{ x: ["-100%", "100%"] }}
+          transition={{
+            duration: 1.2,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          style={{ width: "40%" }}
+        />
+      </motion.div>
     </motion.div>
   );
 };

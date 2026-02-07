@@ -67,9 +67,9 @@ export default {
           DEFAULT: "hsl(var(--navy))",
           light: "hsl(var(--navy-light))",
         },
-        orange: {
-          DEFAULT: "hsl(var(--orange))",
-          hover: "hsl(var(--orange-hover))",
+        "brand-green": {
+          DEFAULT: "hsl(var(--brand-green))",
+          hover: "hsl(var(--brand-green-hover))",
         },
         sky: {
           DEFAULT: "hsl(var(--sky))",

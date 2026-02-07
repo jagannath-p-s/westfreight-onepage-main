@@ -10,7 +10,7 @@ export const ServiceIcon3D = ({ type, className = "" }: ServiceIcon3DProps) => {
   const icons: Record<string, { icon: typeof Plane; gradient: string }> = {
     air: { icon: Plane, gradient: "from-blue-400 to-sky-500" },
     ocean: { icon: Ship, gradient: "from-cyan-400 to-blue-600" },
-    road: { icon: Truck, gradient: "from-orange-400 to-orange-600" },
+    road: { icon: Truck, gradient: "from-accent to-brand-green-hover" },
     warehouse: { icon: Warehouse, gradient: "from-gray-400 to-gray-600" },
     customs: { icon: FileText, gradient: "from-green-400 to-emerald-600" },
     supply: { icon: Globe, gradient: "from-purple-400 to-indigo-600" },

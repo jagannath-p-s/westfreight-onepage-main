@@ -23,30 +23,36 @@ const Index = () => {
         "@id": "https://westfreight.com/#business",
         "name": "West Freight Shipping",
         "image": "https://westfreight.com/logo.png",
-        "description": "Premier freight shipping and logistics company in Dubai, UAE offering air freight, ocean freight, road transportation, warehousing, and customs clearance services.",
+        "description": "West Freight Shipping – logistics services in Dubai, UAE. Premier freight and shipping company offering air freight, ocean freight, road transport, warehousing, and customs clearance. Powering global connections.",
         "url": "https://westfreight.com",
-        "telephone": "+97141234567",
+        "telephone": "+971547810370",
         "email": "info@westfreightshipping.com",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Al Quasis 1",
           "addressLocality": "Dubai",
-          "postalCode": "77660",
-          "addressCountry": "AE"
+          "addressRegion": "Dubai",
+          "addressCountry": "AE",
+          "postalCode": "77660"
         },
         "geo": {
           "@type": "GeoCoordinates",
           "latitude": "25.28489",
           "longitude": "55.37095"
         },
+        "areaServed": [
+          { "@type": "City", "name": "Dubai", "containedInPlace": { "@type": "Country", "name": "United Arab Emirates" } },
+          { "@type": "Country", "name": "United Arab Emirates" },
+          "Middle East",
+          "Global"
+        ],
         "openingHoursSpecification": {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
           "opens": "09:00",
           "closes": "18:00"
         },
-        "priceRange": "$$",
-        "areaServed": ["Dubai", "UAE", "Middle East", "Global"]
+        "priceRange": "$$"
       },
       {
         "@type": "Organization",
@@ -61,7 +67,7 @@ const Index = () => {
         ],
         "contactPoint": {
           "@type": "ContactPoint",
-          "telephone": "+97141234567",
+          "telephone": "+971547810370",
           "contactType": "customer service",
           "availableLanguage": ["English", "Arabic"]
         }
@@ -101,14 +107,14 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>West Freight Shipping | Freight & Logistics Company in Dubai, UAE</title>
-        <meta name="description" content="Premier freight shipping company in Dubai. Air freight, ocean freight, road transport, warehousing & customs clearance. Get a free quote: +971 4 123 4567" />
-        <meta name="keywords" content="freight shipping Dubai, logistics company UAE, air freight Dubai, ocean freight UAE, road freight Middle East, customs clearance Dubai, warehousing services UAE, supply chain Dubai, cargo shipping Al Quasis, international shipping Dubai, freight forwarding UAE, logistics solutions Middle East, cargo transport Dubai, shipping company UAE, freight services Dubai" />
+        <title>West Freight Shipping | Logistics Services in Dubai, UAE – Freight & Shipping</title>
+        <meta name="description" content="West Freight Shipping – logistics services in Dubai, UAE. Air freight, ocean freight, road transport, warehousing & customs clearance. Powering global connections. Get a free quote: +971 54 781 0370" />
+        <meta name="keywords" content="westfreight shipping, West Freight Shipping, logistics services Dubai UAE, logistics services in Dubai, freight shipping Dubai, logistics company UAE, air freight Dubai, ocean freight UAE, shipping company Dubai, freight forwarding UAE, cargo shipping Al Quasis Dubai, international shipping Dubai UAE, warehousing Dubai, customs clearance Dubai UAE" />
         <link rel="canonical" href="https://westfreight.com" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="West Freight Shipping | Dubai's Trusted Logistics Partner" />
-        <meta property="og:description" content="Premier freight and logistics services in Dubai. Air, ocean, road freight with 24/7 support. Get your free quote today!" />
+        <meta property="og:title" content="West Freight Shipping | Logistics Services in Dubai, UAE" />
+        <meta property="og:description" content="West Freight Shipping – logistics services in Dubai, UAE. Air, ocean, road freight, warehousing & customs. Powering global connections. Call +971 54 781 0370." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://westfreight.com" />
         <meta property="og:locale" content="en_AE" />
@@ -116,14 +122,16 @@ const Index = () => {
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="West Freight Shipping | Freight Company Dubai" />
-        <meta name="twitter:description" content="Premier freight shipping & logistics in Dubai, UAE. Air, ocean, road freight. 24/7 support." />
+        <meta name="twitter:title" content="West Freight Shipping | Logistics Services Dubai, UAE" />
+        <meta name="twitter:description" content="West Freight Shipping – logistics services in Dubai, UAE. Freight, shipping, warehousing. Powering global connections." />
         
-        {/* Geo tags */}
+        {/* Geo tags – local SEO Dubai, UAE */}
         <meta name="geo.region" content="AE-DU" />
-        <meta name="geo.placename" content="Dubai" />
+        <meta name="geo.placename" content="Dubai, United Arab Emirates" />
         <meta name="geo.position" content="25.28489;55.37095" />
         <meta name="ICBM" content="25.28489, 55.37095" />
+        <meta name="geo.country" content="AE" />
+        <meta name="geo.city" content="Dubai" />
         
         {/* Additional SEO */}
         <meta name="robots" content="index, follow, max-image-preview:large" />

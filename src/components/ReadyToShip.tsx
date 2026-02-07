@@ -6,7 +6,7 @@ import QuoteForm from "./QuoteForm";
 const ReadyToShip = () => {
   const [isQuoteFormOpen, setIsQuoteFormOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const phoneNumber = "97141234567";
+  const phoneNumber = "971547810370";
   const message = "Hello! I'd like to inquire about your freight services.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

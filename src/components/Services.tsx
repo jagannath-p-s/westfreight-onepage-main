@@ -98,7 +98,7 @@ const Services = () => {
               style={{ willChange: 'transform, opacity', transformStyle: 'preserve-3d' }}
             >
               <motion.div 
-                className="w-14 h-14 bg-gradient-to-br from-accent to-orange-600 rounded-xl flex items-center justify-center mb-4 shadow-md relative transition-all duration-300"
+                className="w-14 h-14 bg-gradient-to-br from-accent to-brand-green-hover rounded-xl flex items-center justify-center mb-4 shadow-md relative transition-all duration-300"
                 style={{ perspective: "1000px", transformStyle: "preserve-3d" }}
               >
                 <service.icon className="w-7 h-7 text-white transition-colors duration-300" style={{ transform: "translateZ(10px)" }} />

@@ -24,12 +24,8 @@ const Footer = () => {
             <div className="mb-6">
               <img 
                 src={logo} 
-                alt="West Freight Shipping Dubai" 
+                alt="West Freight Shipping – Logistics Services Dubai, UAE" 
                 className="h-20 md:h-28 w-auto object-contain"
-                style={{ 
-                  filter: "brightness(0) invert(1)",
-                  WebkitFilter: "brightness(0) invert(1)"
-                }}
               />
             </div>
             <p className="text-primary-foreground/70 leading-relaxed mb-6">
@@ -148,12 +144,12 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="tel:+97141234567"
+                  href="tel:+971547810370"
                   className="flex items-center gap-3 group"
                 >
                   <Phone className="w-5 h-5 text-accent flex-shrink-0" />
                   <span className="text-primary-foreground/70 transition-colors">
-                    +971 4 123 4567
+                    +971 54 781 0370
                   </span>
                 </a>
               </li>

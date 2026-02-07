@@ -31,7 +31,7 @@ const faqs = [
   {
     question: "How do I get a quote for my shipment?",
     answer:
-      "Getting a quote is easy! You can fill out our online quote form, call us at +971 4 123 4567, or email info@westfreightshipping.com with your shipment details. We typically respond within 2 hours during business hours.",
+      "Getting a quote is easy! You can fill out our online quote form, call us at +971 54 781 0370, or email info@westfreightshipping.com with your shipment details. We typically respond within 2 hours during business hours.",
   },
   {
     question: "What are your business hours?",

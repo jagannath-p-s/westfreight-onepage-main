@@ -269,7 +269,7 @@ const QuoteForm = ({ isOpen, onClose }: QuoteFormProps) => {
                 type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-accent hover:bg-orange-hover text-white font-semibold py-4 rounded-lg shadow-lg transition-all duration-300 mt-6"
+                className="w-full bg-accent hover:bg-brand-green-hover text-white font-semibold py-4 rounded-lg shadow-lg transition-all duration-300 mt-6"
               >
                 Submit Request
               </motion.button>

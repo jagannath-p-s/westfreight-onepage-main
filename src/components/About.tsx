@@ -96,7 +96,7 @@ const About = () => {
                 style={{ willChange: 'transform, opacity', transformStyle: 'preserve-3d' }}
               >
                 <motion.div
-                  className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-orange-600 flex items-center justify-center mb-4 transition-colors shadow-md"
+                  className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-brand-green-hover flex items-center justify-center mb-4 transition-colors shadow-md"
                 >
                   <CheckCircle className="w-6 h-6 text-white" />
                 </motion.div>
